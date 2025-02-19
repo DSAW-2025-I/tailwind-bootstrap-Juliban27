@@ -2,31 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="GStyles.css">
+
   <title>Tailwind | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="bg-[#0b0b1a] flex justify-center items-center min-h-screen flex-col">
 
-  Get insights that help your business grow.
+  <main class="flex flex-col-reverse md:flex-row bg-[#1f1838] rounded-xl w-11/12 sm:w-4/5 lg:w-3/5 overflow-hidden">
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+    <section class="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center p-8 sm:p-12 md:p-16">
+      <h1 class="text-white text-2xl sm:text-3xl md:text-4xl font-semibold text-center md:text-left">Get <span class="text-purple-400">insights</span> that help your business grow.</h1>
+      <p class="text-white/60 pt-6 text-sm sm:text-base text-center md:text-left md:w-4/5">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
 
-  10k+ companies
-  314 templates
-  12m+ queries
+      <section class="pt-8 md:pt-12">
+        <ul class="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-12 [&>li>h3]:text-white [&>li>h3]:text-2xl [&>li>h3]:sm:text-3xl [&>li>h3]:font-semibold        [&>li>p]:text-white/50 [&>li>p]:text-sm [&>li]:text-center [&>li]:md:text-left">
+          <li>
+            <h3>10k+</h3>
+            <p>COMPANIES</p>
+          </li>
+          <li>
+            <h3>314</h3>
+            <p>TEMPLATES</p>
+          </li>
+          <li>
+            <h3>12M+</h3>
+            <p>QUERIES</p>
+          </li>
+        </ul>
+      </section>
+    </section>
+    
+    <section class="w-full md:w-1/2 h-64 md:h-auto relative">
+      <div class="absolute inset-0 bg-purple-900 opacity-60"></div>
+      <picture>
+        <source type="image/jpg" media="(min-width: 768px)" srcset="./images/image-header-desktop.jpg">
+        <img class="w-full h-full object-cover" src="./images/image-header-mobile.jpg" alt="Imagen adaptable">
+      </picture>
+    </section>
+  </main>
 
-  <div class="attribution">
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="attribution text-white mt-4 text-sm">
+    Coded by <a href="#" class="text-purple-400">Julian Romero</a>.
+  </footer>
 </body>
 </html>
